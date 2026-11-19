@@ -20,7 +20,7 @@ $articles = [
     'id'        => 'dream-destinations-2026',
     'title'     => 'Top 10 Dream Destinations for 2026',
     'excerpt'   => 'Discover the most breathtaking places around the globe to add to your luxury business class itinerary this year.',
-    'image'     => 'assets/images/imgs/tokyo.png',
+    'image'     => 'assets/images/blog/1.jpg',
     'date'      => 'Nov 12, 2026',
     'category'  => 'Destinations',
     'read_time' => '4 min read',
@@ -30,7 +30,7 @@ $articles = [
     'id'        => 'packing-tips',
     'title'     => 'Travel Smart: 10 Essential Packing Tips for Premium Flyers',
     'excerpt'   => 'Maximize your 2x32kg luggage allowance with curated garment care, smart compression cubes, and essential in-flight items.',
-    'image'     => 'assets/images/blog/blog.png',
+    'image'     => 'assets/images/blog/2.jpg',
     'date'      => 'Nov 08, 2026',
     'category'  => 'Travel Tips',
     'read_time' => '5 min read',
@@ -40,7 +40,7 @@ $articles = [
     'id'        => 'europe-best-time',
     'title'     => 'Best Time to Visit Europe: A Seasonal Flight Guide',
     'excerpt'   => 'From Mediterranean summers to Alpine winter wonders, here is our seasonal guide for booking premium European flights.',
-    'image'     => 'assets/images/imgs/paris.png',
+    'image'     => 'assets/images/blog/3.jpg',
     'date'      => 'Oct 29, 2026',
     'category'  => 'Seasonal Guide',
     'read_time' => '6 min read',
@@ -50,7 +50,7 @@ $articles = [
     'id'        => 'worlds-best-business-cabins',
     'title'     => 'The World’s Best Business Class Cabins Ranked for 2026',
     'excerpt'   => 'A comprehensive benchmark comparing Qatar Qsuite, Singapore Airlines A380, Emirates A380, and British Airways Club Suite.',
-    'image'     => 'assets/images/banners/hero-banner.webp',
+    'image'     => 'assets/images/blog/1.jpg',
     'date'      => 'Oct 22, 2026',
     'category'  => 'Airline Reviews',
     'read_time' => '7 min read',
@@ -60,7 +60,7 @@ $articles = [
     'id'        => 'vip-lounge-access-secrets',
     'title'     => 'How to Unlock VIP First &amp; Business Class Airport Lounges',
     'excerpt'   => 'Indulge in complimentary spa treatments, private sleeping cabanas, and champagne bars before your international departure.',
-    'image'     => 'assets/images/imgs/dubai.png',
+    'image'     => 'assets/images/blog/2.jpg',
     'date'      => 'Oct 15, 2026',
     'category'  => 'Business Perks',
     'read_time' => '4 min read',
@@ -70,42 +70,12 @@ $articles = [
     'id'        => 'japan-cherry-blossom-flights',
     'title'     => 'Spring in Japan: Securing Business Class Seats for Sakura Season',
     'excerpt'   => 'Cherry blossom season demands strategic timing. Discover the top transpacific routes and unpublished fare windows to Tokyo.',
-    'image'     => 'assets/images/imgs/tokyo.png',
+    'image'     => 'assets/images/blog/3.jpg',
     'date'      => 'Oct 05, 2026',
     'category'  => 'Destinations',
     'read_time' => '5 min read',
     'sort_order'=> 6
   ],
-  [
-    'id'        => 'beating-long-haul-jetlag',
-    'title'     => 'The Science of Beating Jet Lag on Long-Haul Overnight Flights',
-    'excerpt'   => 'How lie-flat beds, proper cabin pressurization, and in-flight hydration help you touch down refreshed and meeting-ready.',
-    'image'     => 'assets/images/imgs/london.png',
-    'date'      => 'Sep 28, 2026',
-    'category'  => 'Travel Tips',
-    'read_time' => '5 min read',
-    'sort_order'=> 7
-  ],
-  [
-    'id'        => 'south-america-luxury-itinerary',
-    'title'     => 'Exploring South America in Style: Rio, Buenos Aires &amp; Beyond',
-    'excerpt'   => 'From tango in historic San Telmo to private helicopter transfers in Rio, unlock consolidated rates on premium routes south of the equator.',
-    'image'     => 'assets/images/imgs/latin-america.jpg',
-    'date'      => 'Sep 18, 2026',
-    'category'  => 'Destinations',
-    'read_time' => '6 min read',
-    'sort_order'=> 8
-  ],
-  [
-    'id'        => 'consolidator-airfares-explained',
-    'title'     => 'What Are Consolidator Airfares &amp; How Do They Save You 50–70%?',
-    'excerpt'   => 'An insider deep-dive into wholesale corporate allotments, net fare contracting, and why you should never pay published airline retail.',
-    'image'     => 'assets/images/imgs/new-york.png',
-    'date'      => 'Sep 10, 2026',
-    'category'  => 'Business Perks',
-    'read_time' => '4 min read',
-    'sort_order'=> 9
-  ]
 ];
 
 $categories = ['All', 'Destinations', 'Travel Tips', 'Seasonal Guide', 'Airline Reviews', 'Business Perks'];

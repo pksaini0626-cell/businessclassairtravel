@@ -18,7 +18,7 @@ $flight_deals = [
     'save_percent'   => 'Save 56%',
     'published_fare' => '$7,480',
     'indicative_fare'=> '$3,290*',
-    'image'          => 'assets/images/imgs/london.png',
+    'image'          => 'assets/images/flight-deals/london.jpg',
     'code_from'      => 'JFK',
     'code_to'        => 'LHR',
     'destination'    => 'London (LHR)'
@@ -29,7 +29,7 @@ $flight_deals = [
     'save_percent'   => 'Save 58%',
     'published_fare' => '$7,650',
     'indicative_fare'=> '$3,190*',
-    'image'          => 'assets/images/imgs/paris.png',
+    'image'          => 'assets/images/flight-deals/Paris.jpg',
     'code_from'      => 'JFK',
     'code_to'        => 'CDG',
     'destination'    => 'Paris (CDG)'
@@ -40,7 +40,7 @@ $flight_deals = [
     'save_percent'   => 'Save 57%',
     'published_fare' => '$8,450',
     'indicative_fare'=> '$3,650*',
-    'image'          => 'assets/images/imgs/dubai.png',
+    'image'          => 'assets/images/flight-deals/Dubai.jpg',
     'code_from'      => 'JFK',
     'code_to'        => 'DXB',
     'destination'    => 'Dubai (DXB)'
@@ -51,7 +51,7 @@ $flight_deals = [
     'save_percent'   => 'Save 55%',
     'published_fare' => '$8,900',
     'indicative_fare'=> '$3,890*',
-    'image'          => 'assets/images/imgs/tokyo.png',
+    'image'          => 'assets/images/flight-deals/tokyo.jpg',
     'code_from'      => 'LAX',
     'code_to'        => 'HND',
     'destination'    => 'Tokyo (HND)'
@@ -62,43 +62,10 @@ $flight_deals = [
     'save_percent'   => 'Save 56%',
     'published_fare' => '$9,600',
     'indicative_fare'=> '$4,250*',
-    'image'          => 'assets/images/imgs/sydney.png',
+    'image'          => 'assets/images/flight-deals/Sydeny.jpg',
     'code_from'      => 'SFO',
     'code_to'        => 'SYD',
     'destination'    => 'Sydney (SYD)'
-  ],
-  [
-    'city'           => 'London',
-    'route'          => 'Los Angeles → London',
-    'save_percent'   => 'Save 56%',
-    'published_fare' => '$7,480',
-    'indicative_fare'=> '$3,290*',
-    'image'          => 'assets/images/imgs/london.png',
-    'code_from'      => 'LAX',
-    'code_to'        => 'LHR',
-    'destination'    => 'London (LHR)'
-  ],
-  [
-    'city'           => 'Paris',
-    'route'          => 'Chicago → Paris',
-    'save_percent'   => 'Save 54%',
-    'published_fare' => '$7,350',
-    'indicative_fare'=> '$3,350*',
-    'image'          => 'assets/images/imgs/paris.png',
-    'code_from'      => 'ORD',
-    'code_to'        => 'CDG',
-    'destination'    => 'Paris (CDG)'
-  ],
-  [
-    'city'           => 'Dubai',
-    'route'          => 'Miami → Dubai',
-    'save_percent'   => 'Save 58%',
-    'published_fare' => '$8,600',
-    'indicative_fare'=> '$3,590*',
-    'image'          => 'assets/images/imgs/dubai.png',
-    'code_from'      => 'MIA',
-    'code_to'        => 'DXB',
-    'destination'    => 'Dubai (DXB)'
   ],
 ];
 ?>

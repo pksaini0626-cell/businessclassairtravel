@@ -1,22 +1,12 @@
 <?php
-/**
- * Latest Travel Insights / Blog Section Component
- * 
- * Features:
- * - Playfair serif headline & luxury subtitle matching PDF design
- * - "View All Insights →" arrow link landing on blog.php
- * - Responsive Swiper carousel: 3 blogs on large screen, 2 on tablet, 1 on mobile
- * - Card media with assets/images/blog/blog.png
- * - Interactive hover lift, zoom & arrow mark landing on blog.php
- * - Navigation next/prev arrows for intuitive browsing
- */
+
 
 $blog_articles = [
   [
     'id'       => 'dream-destinations-2026',
     'title'    => 'Top 10 Dream Destinations for 2026',
     'excerpt'  => 'Discover the most breathtaking places around the globe to add to your luxury business class itinerary this year.',
-    'image'    => 'assets/images/blog/blog.png',
+    'image'    => 'assets/images/blog/1.jpg',
     'date'     => 'Nov 12, 2026',
     'read_time'=> '4 min read',
     'category' => 'Destinations',
@@ -26,7 +16,7 @@ $blog_articles = [
     'id'       => 'packing-tips',
     'title'    => 'Travel Smart: 10 Essential Packing Tips',
     'excerpt'  => 'Expert advice on packing light, preserving garments, and making the most of your generous 2x32kg business baggage allowance.',
-    'image'    => 'assets/images/blog/blog.png',
+    'image'    => 'assets/images/blog/2.jpg',
     'date'     => 'Nov 08, 2026',
     'read_time'=> '5 min read',
     'category' => 'Travel Tips',
@@ -36,7 +26,7 @@ $blog_articles = [
     'id'       => 'europe-best-time',
     'title'    => 'Best Time to Visit Europe',
     'excerpt'  => 'From Mediterranean summers to Alpine winter wonders, here is our seasonal guide for booking premium European flights.',
-    'image'    => 'assets/images/blog/blog.png',
+    'image'    => 'assets/images/blog/3.jpg',
     'date'     => 'Oct 29, 2026',
     'read_time'=> '6 min read',
     'category' => 'Seasonal Guide',

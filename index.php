@@ -62,9 +62,6 @@ $meta_description = 'Get exclusive business class and first class flight deals a
 
   <?php include 'components/footer.php'; ?>
 
-  <!-- Flight Search Animated Loader Overlay -->
-  <?php include 'components/search-loader.php'; ?>
-
   <!-- Bootstrap 5.3 Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 

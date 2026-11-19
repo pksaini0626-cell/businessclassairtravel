@@ -322,6 +322,187 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // =========================================================================
+  // 6b. MODAL TRIP TYPE, CABIN & SWAP LOGIC (Mobile Flight Booking Modal)
+  // =========================================================================
+  const modalCabinClassSelect = document.getElementById('modalCabinClassSelect');
+  const modalContactEmail = document.getElementById('modalContactEmail');
+  const modalContactPhone = document.getElementById('modalContactPhone');
+  const modalCabinClassBox = document.getElementById('modalCabinClassBox');
+  const modalEmailBox = document.getElementById('modalEmailBox');
+  const modalPhoneBox = document.getElementById('modalPhoneBox');
+  const modalEmailCol = document.getElementById('modalEmailCol');
+  const modalPhoneCol = document.getElementById('modalPhoneCol');
+  const modalFlightSearchForm = document.getElementById('modalFlightSearchForm');
+
+  if (modalContactPhone) {
+    modalContactPhone.addEventListener('input', function (e) {
+      let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+      if (x && !e.target.value.startsWith('+')) {
+        e.target.value = !x[2] ? x[1] : x[1] + '-' + x[2] + (x[3] ? '-' + x[3] : '');
+      }
+    });
+  }
+
+  if (modalCabinClassSelect) {
+    const premiumTiers = ['premium_economy', 'business_class', 'first_class'];
+
+    modalCabinClassSelect.addEventListener('change', function () {
+      const selectedValue = this.value;
+
+      if (selectedValue && selectedValue !== '') {
+        if (modalEmailCol) {
+          modalEmailCol.classList.remove('d-none');
+          modalEmailCol.classList.add('animate-field-in');
+        }
+        if (modalPhoneCol) {
+          modalPhoneCol.classList.remove('d-none');
+          modalPhoneCol.classList.add('animate-field-in');
+        }
+
+        if (modalContactEmail) modalContactEmail.setAttribute('required', 'required');
+        if (modalContactPhone) modalContactPhone.setAttribute('required', 'required');
+
+        if (premiumTiers.includes(selectedValue)) {
+          if (modalCabinClassBox) modalCabinClassBox.classList.add('is-active-premium');
+          if (modalEmailBox) modalEmailBox.classList.add('highlight-premium');
+          if (modalPhoneBox) modalPhoneBox.classList.add('highlight-premium');
+        } else {
+          if (modalCabinClassBox) modalCabinClassBox.classList.remove('is-active-premium');
+          if (modalEmailBox) modalEmailBox.classList.remove('highlight-premium');
+          if (modalPhoneBox) modalPhoneBox.classList.remove('highlight-premium');
+        }
+      } else {
+        if (modalEmailCol) {
+          modalEmailCol.classList.add('d-none');
+          modalEmailCol.classList.remove('animate-field-in');
+        }
+        if (modalPhoneCol) {
+          modalPhoneCol.classList.add('d-none');
+          modalPhoneCol.classList.remove('animate-field-in');
+        }
+
+        if (modalContactEmail) modalContactEmail.removeAttribute('required');
+        if (modalContactPhone) modalContactPhone.removeAttribute('required');
+
+        if (modalCabinClassBox) modalCabinClassBox.classList.remove('is-active-premium');
+        if (modalEmailBox) modalEmailBox.classList.remove('highlight-premium');
+        if (modalPhoneBox) modalPhoneBox.classList.remove('highlight-premium');
+      }
+    });
+  }
+
+  // Modal Swap Airports
+  const modalBtnSwapAirports = document.getElementById('modalBtnSwapAirports');
+  const modalFromAirport = document.getElementById('modalFromAirport');
+  const modalToAirport = document.getElementById('modalToAirport');
+
+  if (modalBtnSwapAirports && modalFromAirport && modalToAirport) {
+    modalBtnSwapAirports.addEventListener('click', function () {
+      this.classList.toggle('rotated');
+      const tempVal = modalFromAirport.value;
+      modalFromAirport.value = modalToAirport.value;
+      modalToAirport.value = tempVal;
+
+      modalFromAirport.classList.add('field-swapped');
+      modalToAirport.classList.add('field-swapped');
+      setTimeout(function () {
+        modalFromAirport.classList.remove('field-swapped');
+        modalToAirport.classList.remove('field-swapped');
+      }, 350);
+    });
+  }
+
+  // Modal Trip Type Toggle
+  const modalBtnRoundTrip = document.getElementById('modalBtnRoundTrip');
+  const modalBtnOneWay = document.getElementById('modalBtnOneWay');
+  const modalTripTypeInput = document.getElementById('modalTripTypeInput');
+  const modalReturnDateCol = document.getElementById('modalReturnDateCol');
+  const modalReturnDateInput = document.getElementById('modalReturnDate');
+
+  if (modalBtnRoundTrip && modalBtnOneWay && modalTripTypeInput) {
+    modalBtnRoundTrip.addEventListener('click', function () {
+      modalBtnRoundTrip.classList.add('active');
+      modalBtnOneWay.classList.remove('active');
+      modalTripTypeInput.value = 'round-trip';
+
+      if (modalReturnDateCol) {
+        modalReturnDateCol.classList.remove('date-disabled');
+      }
+      if (modalReturnDateInput) {
+        modalReturnDateInput.removeAttribute('disabled');
+      }
+    });
+
+    modalBtnOneWay.addEventListener('click', function () {
+      modalBtnOneWay.classList.add('active');
+      modalBtnRoundTrip.classList.remove('active');
+      modalTripTypeInput.value = 'one-way';
+
+      if (modalReturnDateCol) {
+        modalReturnDateCol.classList.add('date-disabled');
+      }
+      if (modalReturnDateInput) {
+        modalReturnDateInput.setAttribute('disabled', 'disabled');
+      }
+    });
+  }
+
+  // Modal Form Submission with Animated Loader
+  if (modalFlightSearchForm) {
+    modalFlightSearchForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Dismiss modal if open
+      const modalEl = document.getElementById('flightBookingModal');
+      if (modalEl && typeof bootstrap !== 'undefined' && bootstrap.Modal) {
+        const modalInstance = bootstrap.Modal.getInstance(modalEl);
+        if (modalInstance) {
+          modalInstance.hide();
+        }
+      }
+
+      const fromVal = modalFromAirport ? modalFromAirport.value.trim() : 'New York (JFK)';
+      const toVal = modalToAirport ? modalToAirport.value.trim() : 'London (LGW)';
+
+      const loaderOverlay = document.getElementById('flightSearchLoaderOverlay');
+      const loaderRoute = document.getElementById('loaderRouteDisplay');
+      const progressFill = document.getElementById('loaderProgressFill');
+      const stepText = document.getElementById('loaderStepText');
+
+      if (loaderOverlay) {
+        loaderOverlay.classList.remove('d-none');
+        if (loaderRoute) {
+          loaderRoute.innerHTML = `<span class="loader-origin">${fromVal || 'New York (JFK)'}</span> <i class="bi bi-arrow-right mx-2 text-danger"></i> <span class="loader-dest">${toVal || 'London (LGW)'}</span>`;
+        }
+
+        if (progressFill) progressFill.style.width = '25%';
+
+        setTimeout(() => {
+          if (progressFill) progressFill.style.width = '60%';
+          if (stepText) stepText.textContent = 'Scanning 60+ partner airlines (Emirates, Qatar, BA, Virgin)...';
+        }, 500);
+
+        setTimeout(() => {
+          if (progressFill) progressFill.style.width = '88%';
+          if (stepText) stepText.textContent = 'Unlocking unpublished consolidator inventory...';
+        }, 1000);
+
+        setTimeout(() => {
+          if (progressFill) progressFill.style.width = '100%';
+          if (stepText) stepText.textContent = 'Found exclusive 31% savings! Preparing your itinerary...';
+        }, 1450);
+
+        setTimeout(() => {
+          window.location.href = 'flight-results.php';
+        }, 1800);
+
+      } else {
+        window.location.href = 'flight-results.php';
+      }
+    });
+  }
+
+  // =========================================================================
   // 7. POPULAR DESTINATIONS LOOP CAROUSEL (Auto-run, Pause on Hover, Clickable)
   // =========================================================================
   const destSwiperEl = document.querySelector('.destinations-swiper');

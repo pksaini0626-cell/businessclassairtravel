@@ -5055,4 +5055,170 @@ h6 {
   box-shadow: 0 8px 20px rgba(162, 13, 36, 0.45);
 }
 
+/* =============================================
+   MOBILE BOTTOM NAVIGATION & MODAL
+   ============================================= */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: rgba(8, 38, 76, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.25);
+  z-index: 1040;
+  padding: 0.5rem 0.75rem;
+  padding-bottom: calc(0.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+.mobile-bottom-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mobile-nav-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.65rem 0.75rem;
+  border-radius: 12px;
+  text-decoration: none !important;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  min-height: 52px;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 1. Call Now Button */
+.mobile-nav-call {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.mobile-nav-call:hover,
+.mobile-nav-call:active {
+  background: rgba(255, 255, 255, 0.18);
+  color: #ffffff;
+}
+
+.mobile-nav-call .mobile-nav-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-dark-red);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(162, 13, 36, 0.4);
+}
+
+/* 2. Book Flight Button */
+.mobile-nav-book {
+  background: linear-gradient(135deg, var(--color-dark-red) 0%, #c4122d 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(162, 13, 36, 0.45);
+}
+
+.mobile-nav-book:hover,
+.mobile-nav-book:active {
+  background: linear-gradient(135deg, #830b1d 0%, var(--color-dark-red) 100%);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.mobile-nav-book .mobile-nav-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.mobile-nav-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.15;
+}
+
+.mobile-nav-title {
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+}
+
+.mobile-nav-sub {
+  font-size: 0.68rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+}
+
+.mobile-nav-divider {
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 0 0.15rem;
+}
+
+/* Avoid page content being hidden beneath fixed bottom nav on mobile */
+@media (max-width: 991.98px) {
+  body {
+    padding-bottom: 74px !important;
+  }
+}
+
+/* Modal Specific Adjustments */
+.mobile-flight-modal .modal-content {
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.mobile-flight-modal .modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.modal-header-icon-box {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--color-dark-red);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.flight-search-modal-card {
+  box-shadow: none !important;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+}
+
+
 

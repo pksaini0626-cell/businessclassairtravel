@@ -17,7 +17,7 @@ $destinations = [
     'code'        => 'JFK',
     'airport'     => 'New York (JFK)',
     'country'     => 'United States',
-    'image'       => 'assets/images/imgs/new-york.png',
+    'image'       => 'assets/images/popular-destination/Newyork.jpg',
     'badge'       => 'Popular'
   ],
   [
@@ -25,7 +25,7 @@ $destinations = [
     'code'        => 'LHR',
     'airport'     => 'London (LHR)',
     'country'     => 'United Kingdom',
-    'image'       => 'assets/images/imgs/london.png',
+    'image'       => 'assets/images/popular-destination/london.jpg',
     'badge'       => 'Trending'
   ],
   [
@@ -33,7 +33,7 @@ $destinations = [
     'code'        => 'CDG',
     'airport'     => 'Paris (CDG)',
     'country'     => 'France',
-    'image'       => 'assets/images/imgs/paris.png',
+    'image'       => 'assets/images/popular-destination/Paris.jpg',
     'badge'       => 'Romantic'
   ],
   [
@@ -41,7 +41,7 @@ $destinations = [
     'code'        => 'DXB',
     'airport'     => 'Dubai (DXB)',
     'country'     => 'UAE',
-    'image'       => 'assets/images/imgs/dubai.png',
+    'image'       => 'assets/images/popular-destination/Dubai.jpg',
     'badge'       => 'Luxury'
   ],
   [
@@ -49,7 +49,7 @@ $destinations = [
     'code'        => 'HND',
     'airport'     => 'Tokyo (HND)',
     'country'     => 'Japan',
-    'image'       => 'assets/images/imgs/tokyo.png',
+    'image'       => 'assets/images/popular-destination/tokyo.jpg',
     'badge'       => 'Heritage'
   ],
   [
@@ -57,7 +57,7 @@ $destinations = [
     'code'        => 'SYD',
     'airport'     => 'Sydney (SYD)',
     'country'     => 'Australia',
-    'image'       => 'assets/images/imgs/sydney.png',
+    'image'       => 'assets/images/popular-destination/Sydeny.jpg',
     'badge'       => 'Iconic'
   ],
 ];

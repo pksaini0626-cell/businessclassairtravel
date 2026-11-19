@@ -100,3 +100,10 @@
   </div>
 </footer>
 <!-- ===== END FOOTER ===== -->
+
+<!-- Flight Search Animated Loader Overlay -->
+<?php include __DIR__ . '/search-loader.php'; ?>
+
+<!-- Mobile Bottom Navigation Bar & Flight Booking Modal -->
+<?php include __DIR__ . '/mobile-bottom-nav.php'; ?>
+

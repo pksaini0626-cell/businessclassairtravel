@@ -490,9 +490,6 @@ $current_time     = date('H:i');
   <!-- ===== 6. SITE FOOTER ===== -->
   <?php include 'components/footer.php'; ?>
 
-  <!-- ===== 7. SEARCH ANIMATED LOADER OVERLAY ===== -->
-  <?php include 'components/search-loader.php'; ?>
-
   <!-- Bootstrap 5.3 Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
