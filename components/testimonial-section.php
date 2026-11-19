@@ -47,10 +47,10 @@
               <div class="swiper-slide">
                 <div class="testimonial-card">
                   <div class="testimonial-avatar-wrapper">
-                    <img src="assets/images/imgs/testimonial-1.jpg" 
+                    <img src="assets/images/testimonials/testimonial-1.jpg" 
                          alt="Sarah M." 
                          class="testimonial-avatar" 
-                         loading="eager">
+                         loading="lazy">
                   </div>
                   <div class="testimonial-body">
                     <p class="testimonial-quote mb-1">
@@ -74,10 +74,10 @@
               <div class="swiper-slide">
                 <div class="testimonial-card">
                   <div class="testimonial-avatar-wrapper">
-                    <img src="assets/images/imgs/testimonial-2.jpg" 
+                    <img src="assets/images/testimonials/testimonial-2.jpg" 
                          alt="David K." 
                          class="testimonial-avatar" 
-                         loading="eager">
+                         loading="lazy">
                   </div>
                   <div class="testimonial-body">
                     <p class="testimonial-quote mb-1">
@@ -101,10 +101,10 @@
               <div class="swiper-slide">
                 <div class="testimonial-card">
                   <div class="testimonial-avatar-wrapper">
-                    <img src="assets/images/imgs/testimonial-3.jpg" 
+                    <img src="assets/images/testimonials/testimonial-3.jpg" 
                          alt="Elena R." 
                          class="testimonial-avatar" 
-                         loading="eager">
+                         loading="lazy">
                   </div>
                   <div class="testimonial-body">
                     <p class="testimonial-quote mb-1">
@@ -112,6 +112,33 @@
                     </p>
                     <div class="testimonial-meta d-flex align-items-center justify-content-between flex-wrap gap-2">
                       <span class="testimonial-author">Elena R. &ndash; Canada</span>
+                      <div class="testimonial-rating" aria-label="5 out of 5 stars">
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                        <i class="bi bi-star-fill text-warning"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 4: Marcus Chen -->
+              <div class="swiper-slide">
+                <div class="testimonial-card">
+                  <div class="testimonial-avatar-wrapper">
+                    <img src="assets/images/testimonials/testimonial-4.jpg" 
+                         alt="Marcus Chen" 
+                         class="testimonial-avatar" 
+                         loading="lazy">
+                  </div>
+                  <div class="testimonial-body">
+                    <p class="testimonial-quote mb-1">
+                      &ldquo;Exceptional lie-flat booking experience to Singapore. Handled all seat selections perfectly.&rdquo;
+                    </p>
+                    <div class="testimonial-meta d-flex align-items-center justify-content-between flex-wrap gap-2">
+                      <span class="testimonial-author">Marcus C. &ndash; Australia</span>
                       <div class="testimonial-rating" aria-label="5 out of 5 stars">
                         <i class="bi bi-star-fill text-warning"></i>
                         <i class="bi bi-star-fill text-warning"></i>
